@@ -1,0 +1,99 @@
+   13  git init
+   14  git status
+   15  git config
+   16  git config --global
+   17  git config --global user.email "manish.fastprep@gmail.com"
+   18  git config --global user.name "Manish Chauhan"
+   19  git add *
+   20  git commit -m "OCP Code Practice Commit 1"
+   21  ls
+   22  ls ocp/
+   23  ls src
+   24  ls
+   25  pwd
+   26  cd ocp/
+   27  cd src/
+   28  ls
+   29  cd ..
+   30  cd ..
+   31  pwd
+   32  rm -f ocp/
+   33  rmdir -f ocp
+   34  rmdir -rf ocp/
+   35  rmdir -rf ocp
+   36  rm -rf ocp
+   37  ls
+   38  git status
+   39  git commit -m "Deleted OCP folder"
+   40  git status
+   41  git add *
+   42  git commit -m "Deleted OCP folder"
+   43  cd ..
+   44  pwd
+   45  cp headFirst ManishGIT
+   46  cp -rf headFirst ManishGIT
+   47  cd ManishGIT/
+   48  pwd
+   49  git branch -M main
+   50  git remote add origin
+   51  git remote add origin
+   52  git remote add origin
+   53  cls
+   54  clear
+   55  pwd
+   56  git status
+   57  git add *
+   58  git add --all
+   59  pwd
+   60  DELL@Manish-Chauhan MINGW64 ~/Desktop/ManishGIT (main)
+   61  $ pwd
+   62  /c/Users/DELL/Desktop/ManishGIT
+   63  DELL@Manish-Chauhan MINGW64 ~/Desktop/ManishGIT (main)
+   64  $ git status
+   65  On branch main
+   66  Untracked files:
+   67    (use "git add <file>..." to include in what will be committed)
+   68          headFirst/
+   69  nothing added to commit but untracked files present (use "git add" to track)
+   70  DELL@Manish-Chauhan MINGW64 ~/Desktop/ManishGIT (main)
+   71  $ git add *
+   72  warning: LF will be replaced by CRLF in headFirst/Manish.txt.
+   73  The file will have its original line endings in your working directory
+   74  error: 'headFirst/sql/' does not have a commit checked out
+   75  fatal: adding files failed
+   76  DELL@Manish-Chauhan MINGW64 ~/Desktop/ManishGIT (main)
+   77  $ git add --all
+   78  warning: LF will be replaced by CRLF in headFirst/Manish.txt.
+   79  The file will have its original line endings in your working directory
+   80  error: 'headFirst/sql/' does not have a commit checked out
+   81  fatal: adding files failed
+   82  DELL@Manish-Chauhan MINGW64 ~/Desktop/ManishGIT (main)
+   83  $ ^C
+   84  DELL@Manish-Chauhan MINGW64 ~/Desktop/ManishGIT (main)
+   85  $ pwd
+   86  /c/Users/DELL/Desktop/ManishGIT
+   87  DELL@Manish-Chauhan MINGW64 ~/Desktop/ManishGIT (main)
+   88  $
+   89  git -rf .git
+   90  git init
+   91  git config user.email "manish.fastprep@gmail.com"
+   92  git config user.name "Manish Chauhan"
+   93  echo "Hi I am Manish Chauhan . This is the java source files and classes for my OCP 8 Java Certification" >> README.MD
+   94  git add README.MD
+   95  git commit -m "First Commit README.MD"
+   96  git branch -M main
+   97  git remote add origin https://github.com/manishfastprep/JAVA_OCP.git
+   98  git push -u origin main
+   99  git push -u origin main
+  100  git pull origin master
+  101  git pull origin main
+  102*
+  103  git push -u origin main
+  104  git push --help
+  105  git status
+  106  git push -u origin main
+  107  git pull origin main
+  108  git pull origin main --allow-unrelated-histories
+  109  git push -u origin main
+  110  history
+
