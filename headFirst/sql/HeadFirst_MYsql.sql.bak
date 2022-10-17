@@ -1,0 +1,557 @@
+DROP database IF EXISTS gregs_list;
+create database gregs_list;
+USE gregs_list;
+CREATE TABLE `drink_info` (
+  `drink_name` varchar(16) default NULL,
+  `cost` decimal(4,2) default NULL,
+  `carbs` decimal(4,2) default NULL,
+  `color` varchar(20) default NULL,
+  `ice` char(1) default NULL,
+  `calories` int(11) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO drink_info VALUES ('Blackthorn', 3, 8.4, 'yellow', 'Y', 33); 
+INSERT INTO drink_info VALUES ('Blue Moon', 2.5, 3.2, 'blue', 'Y', 12); 
+INSERT INTO drink_info VALUES ('Oh My Gosh', 3.5, 8.6, 'orange', 'Y', 35); 
+INSERT INTO drink_info VALUES ('Lime Fizz', 2.5, 5.4, 'green', 'Y', 24); 
+INSERT INTO drink_info VALUES ('Kiss on the Lips', 5.5, 42.5, 'purple', 'Y', 171); 
+INSERT INTO drink_info VALUES ('Hot Gold', 3.2, 32.1, 'orange', 'N', 135); 
+INSERT INTO drink_info VALUES ('Lone Tree', 3.6, 4.2, 'red', 'Y', 17); 
+INSERT INTO drink_info VALUES ('Greyhound', 4, 14, 'yellow', 'Y', 50); 
+INSERT INTO drink_info VALUES ('Indian Summer', 2.8, 7.2, 'brown', 'N', 30); 
+INSERT INTO drink_info VALUES ('Bull Frog', 2.6, 21.5, 'tan', 'Y', 80); 
+INSERT INTO drink_info VALUES ('Soda and It', 3.8, 4.7, 'red', 'N', 19); 
+INSERT INTO drink_info VALUES ('Slim Shady', 4.35, NULL, 'clear', 'Y', NULL); 
+
+
+# CocoaMySQL dump
+# Version 0.7b5
+# http://cocoamysql.sourceforge.net
+#
+# Host: localhost (MySQL 5.0.37)
+# Database: hfmysql
+# Generation Time: 2007-09-07 00:13:36 -0400
+# ************************************************************
+
+# Dump of table doughnut_ratings
+# ------------------------------------------------------------
+
+CREATE TABLE `doughnut_ratings` (
+  `location` varchar(50) default NULL,
+  `time` time default NULL,
+  `date` date default NULL,
+  `type` varchar(50) default NULL,
+  `rating` tinyint(4) default NULL,
+  `comments` varchar(50) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `doughnut_ratings` (`location`,`time`,`date`,`type`,`rating`,`comments`) VALUES ('Krispy King','08:50:00','2007-09-27','plain glazed','10','almost perfect');
+INSERT INTO `doughnut_ratings` (`location`,`time`,`date`,`type`,`rating`,`comments`) VALUES ('Duncan\\\'s Donuts','08:59:00','2007-08-25',NULL,'6','greasy');
+INSERT INTO `doughnut_ratings` (`location`,`time`,`date`,`type`,`rating`,`comments`) VALUES ('Starbuzz Coffee','07:35:00','2007-05-24','cinnamon cake','5','stale, but tasty');
+INSERT INTO `doughnut_ratings` (`location`,`time`,`date`,`type`,`rating`,`comments`) VALUES ('Duncan\\\'s Donuts','07:03:00','2007-04-26','jelly','7','not enough jelly');
+
+
+
+# Dump of table easy_drinks
+# ------------------------------------------------------------
+
+CREATE TABLE `easy_drinks` (
+  `drink_name` varchar(16) default NULL,
+  `main` varchar(20) default NULL,
+  `amount1` decimal(3,1) default NULL,
+  `second` varchar(20) default NULL,
+  `amount2` decimal(4,2) default NULL,
+  `directions` varchar(250) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `easy_drinks` (`drink_name`,`main`,`amount1`,`second`,`amount2`,`directions`) VALUES ('Kiss on the Lips','cherry juice',2.0,'apricot nectar',7.00,'serve over ice with straw');
+INSERT INTO `easy_drinks` (`drink_name`,`main`,`amount1`,`second`,`amount2`,`directions`) VALUES ('Hot Gold','peach nectar',3.0,'orange juice',6.00,'pour hot orange juice in mug and add peach nectar');
+INSERT INTO `easy_drinks` (`drink_name`,`main`,`amount1`,`second`,`amount2`,`directions`) VALUES ('Lone Tree','soda',1.5,'cherry juice',0.75,'stir with ice, strain into cocktail glass');
+INSERT INTO `easy_drinks` (`drink_name`,`main`,`amount1`,`second`,`amount2`,`directions`) VALUES ('Greyhound','soda',1.5,'grapefruit juice',5.00,'serve over ice, stir well');
+INSERT INTO `easy_drinks` (`drink_name`,`main`,`amount1`,`second`,`amount2`,`directions`) VALUES ('Indian Summer','apple juice',2.0,'hot tea',6.00,'add juice to mug and top off with hot tea');
+INSERT INTO `easy_drinks` (`drink_name`,`main`,`amount1`,`second`,`amount2`,`directions`) VALUES ('Bull Frog','iced tea',1.5,'lemonade',5.00,'serve over ice with lime slice');
+INSERT INTO `easy_drinks` (`drink_name`,`main`,`amount1`,`second`,`amount2`,`directions`) VALUES ('Soda and It','soda',2.0,'grape juice',1.00,'shake in cocktail glass, no ice');
+INSERT INTO `easy_drinks` (`drink_name`,`main`,`amount1`,`second`,`amount2`,`directions`) VALUES ('Blackthorn','tonic water',1.5,'pineapple juice',1.00,'stir with ice, strain into cocktail glass with lemon twist');
+INSERT INTO `easy_drinks` (`drink_name`,`main`,`amount1`,`second`,`amount2`,`directions`) VALUES ('Blue Moon','soda',1.5,'blueberry juice',0.75,'stir with ice, strain into cocktail glass with lemon twist');
+INSERT INTO `easy_drinks` (`drink_name`,`main`,`amount1`,`second`,`amount2`,`directions`) VALUES ('Oh My Gosh','peach nectar',1.0,'pineapple juice',1.00,'stir with ice, strain into shot glass');
+INSERT INTO `easy_drinks` (`drink_name`,`main`,`amount1`,`second`,`amount2`,`directions`) VALUES ('Lime Fizz','Sprite',1.5,'lime juice',0.75,'stir with ice, strain into cocktail glass');
+
+
+
+# CocoaMySQL dump
+# Version 0.7b5
+# http://cocoamysql.sourceforge.net
+#
+# Host: localhost (MySQL 5.0.37)
+# Database: ch9
+# Generation Time: 2007-09-07 11:09:52 -0400
+# ************************************************************
+
+# Dump of table projekts
+# ------------------------------------------------------------
+
+CREATE TABLE `projekts` (
+  `number` int(11) NOT NULL default '0',
+  `descriptionofproj` varchar(50) default NULL,
+  `contractoronjob` varchar(10) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `projekts` (`number`,`descriptionofproj`,`contractoronjob`) VALUES ('1','outside house painting','Murphy');
+INSERT INTO `projekts` (`number`,`descriptionofproj`,`contractoronjob`) VALUES ('2','kitchen remodel','Valdez');
+INSERT INTO `projekts` (`number`,`descriptionofproj`,`contractoronjob`) VALUES ('3','wood floor installation','Keller');
+INSERT INTO `projekts` (`number`,`descriptionofproj`,`contractoronjob`) VALUES ('4','roofing','Jackson');
+
+
+
+ CREATE TABLE `fish_info` (
+  `common` varchar(50) NOT NULL,
+  `species` varchar(50) NOT NULL,
+  `location` varchar(50) NOT NULL,
+  `weight` varchar(15) NOT NULL 
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+INSERT INTO fish_info VALUES ('bass, largemouth' ,'M. salmoides' ,'Montgomery Lake, GA', '22 lb 4 oz'); 
+INSERT INTO fish_info VALUES ('walleye', 'S. vitreus', 'Old Hickory Lake, TN', '25 lb 0 oz'); 
+INSERT INTO fish_info VALUES ('trout, cutthroat', 'O. Clarki', 'Pyramid Lake, NV', '41 lb 0 oz'); 
+INSERT INTO fish_info VALUES ('perch, yellow', 'P. Flavescens', 'Bordentown, NJ', '4 lb 3 oz'); 
+INSERT INTO fish_info VALUES ('bluegill', 'L. Macrochirus', 'Ketona Lake, AL', '4 lb 12 oz'); 
+INSERT INTO fish_info VALUES ('gar, longnose', 'L. Osseus', 'Trinity River, TX', '50 lb 5 oz'); 
+INSERT INTO fish_info VALUES ('crappie, white', 'P. annularis', 'Enid Dam, MS', '5 lb 3 oz'); 
+INSERT INTO fish_info VALUES ('pickerel, grass', 'E. americanus', 'Dewart Lake, IN', '1 lb 0 oz'); 
+INSERT INTO fish_info VALUES ('goldfish', 'C. auratus', 'Lake Hodges, CA', '6 lb 10 oz'); 
+INSERT INTO fish_info VALUES ('salmon, chinook', 'O. Tshawytscha', 'Kenai River, AK', '97 lb 4 oz'); 
+ CREATE TABLE `fish_records` (
+  `first_name` varchar(50) NOT NULL,
+ `last_name` varchar(50) NOT NULL,
+ `common` varchar(50) NOT NULL,
+ `location` varchar(50) NOT NULL,
+ `state` varchar(2) NOT NULL,
+  `weight` varchar(15) NOT NULL ,
+  `date` DATE NOT NULL 
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+INSERT INTO fish_records VALUES ('George', 'Perry', 'bass, largemouth', 'Montgomery Lake', 'GA', '22 lb 4 oz', '1932-06-02');
+INSERT INTO fish_records VALUES ('Mabry', 'Harper', 'walleye', 'Old Hickory Lake', 'TN', '25 lb 0 oz', '1960-08-02' );
+INSERT INTO fish_records VALUES ('John', 'Skimmerhorn', 'trout, cutthroat', 'Pyramid Lake', 'NV', '41 lb 0 oz', '1925-12-1' );
+INSERT INTO fish_records VALUES ('C.C.', 'Abbot', 'perch, yellow', 'Bordentown', 'NJ', '4 lb 3 oz', '1865-5-1' );
+INSERT INTO fish_records VALUES ('T.S.', 'Hudson', 'bluegill', 'Ketona Lake', 'AL', '4 lb 12 oz', '1950-4-9' );
+INSERT INTO fish_records VALUES ('Townsend', 'Miller', 'gar, longnose', 'Trinity River', 'TX', '50 lb 5 oz', '1954-7-30' );
+INSERT INTO fish_records VALUES ('Fred', 'Bright', 'crappie, white', 'Enid Dam', 'MS', '5 lb 3 oz', '1957-7-31' );
+INSERT INTO fish_records VALUES ('Mike', 'Berg', 'pickerel, grass', 'Dewart Lake', 'IN', '1 lb 0 oz', '1990-6-9' );
+INSERT INTO fish_records VALUES ('Florentino', 'Abena', 'goldfish', 'Lake Hodges', 'CA', '6 lb 10 oz', '1996-4-17' );
+INSERT INTO fish_records VALUES ('Les', 'Anderson', 'salmon, chinook', 'Kenai River', 'AK', '97 lb 4 oz', '1985-5-17');
+
+# Dump of table girls
+# ------------------------------------------------------------
+
+CREATE TABLE `girls` (
+  `girl_id` int(11) default NULL,
+  `girl` varchar(20) default NULL,
+  `toy_id` int(11) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `girls` (`girl_id`,`girl`,`toy_id`) VALUES ('1','Jane','3');
+INSERT INTO `girls` (`girl_id`,`girl`,`toy_id`) VALUES ('2','Sally','4');
+INSERT INTO `girls` (`girl_id`,`girl`,`toy_id`) VALUES ('3','Cindy','1');
+INSERT INTO `girls` (`girl_id`,`girl`,`toy_id`) VALUES ('4','Mandy','1');
+
+# CocoaMySQL dump
+# Version 0.7b5
+# http://cocoamysql.sourceforge.net
+#
+# Host: localhost (MySQL 5.0.37)
+# Database: ch9
+# Generation Time: 2007-09-10 08:55:40 -0400
+# ************************************************************
+
+# Dump of table super_heroes
+# ------------------------------------------------------------
+
+CREATE TABLE `super_heroes` (
+  `name` varchar(20) NOT NULL,
+  `power` varchar(50) NOT NULL default '',
+  `weakness` varchar(20) NOT NULL default '',
+  `city` varchar(20) NOT NULL,
+  `country` varchar(20) NOT NULL,
+  `arch_enemy` varchar(50) NOT NULL,
+  `initials` varchar(2) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `super_heroes` (`name`,`power`,`weakness`,`city`,`country`,`arch_enemy`,`initials`) VALUES ('Super Trashman','Cleans quickly','bleach','Gotham','US','Verminator','ST');
+INSERT INTO `super_heroes` (`name`,`power`,`weakness`,`city`,`country`,`arch_enemy`,`initials`) VALUES ('The Broker','Makes money from nothing','','New York','US','Mister Taxman','TB');
+INSERT INTO `super_heroes` (`name`,`power`,`weakness`,`city`,`country`,`arch_enemy`,`initials`) VALUES ('Super Guy','Flies','birds','Metropolis','US','Super Fella','SG');
+INSERT INTO `super_heroes` (`name`,`power`,`weakness`,`city`,`country`,`arch_enemy`,`initials`) VALUES ('Wonder Waiter','Never forgets an order','insects','Paris','France','All You Can Eat Girl','WW');
+INSERT INTO `super_heroes` (`name`,`power`,`weakness`,`city`,`country`,`arch_enemy`,`initials`) VALUES ('Dirtman','Creates dust storms','bleach','Tulsa','US','Hoover','D');
+INSERT INTO `super_heroes` (`name`,`power`,`weakness`,`city`,`country`,`arch_enemy`,`initials`) VALUES ('Super Guy','Super strength','aluminum','Metropolis','US','Badman','SG');
+INSERT INTO `super_heroes` (`name`,`power`,`weakness`,`city`,`country`,`arch_enemy`,`initials`) VALUES ('Furious Woman','Gets really, really angry','','Rome','Italy','The Therapist','FW');
+INSERT INTO `super_heroes` (`name`,`power`,`weakness`,`city`,`country`,`arch_enemy`,`initials`) VALUES ('The Toad','Tongue of Justice','insects','London','England','Heron','T');
+INSERT INTO `super_heroes` (`name`,`power`,`weakness`,`city`,`country`,`arch_enemy`,`initials`) VALUES ('Librarian','Can find anything','children','Springfield','US','Chaos Creep','L');
+INSERT INTO `super_heroes` (`name`,`power`,`weakness`,`city`,`country`,`arch_enemy`,`initials`) VALUES ('Goose Girl','Flies','','Minneapolis','US','The Quilter','GG');
+INSERT INTO `super_heroes` (`name`,`power`,`weakness`,`city`,`country`,`arch_enemy`,`initials`) VALUES ('Stick Man','Stands in for humans','hang man','London','England','Eraserman','SM');
+
+
+
+# Dump of table movie_table
+# ------------------------------------------------------------
+
+CREATE TABLE `movie_table` (
+  `movie_id` int(11) NOT NULL auto_increment,
+  `title` varchar(50) NOT NULL,
+  `rating` varchar(5) NOT NULL,
+  `category` varchar(10) NOT NULL,
+  `purchased` date NOT NULL,
+  PRIMARY KEY  (`movie_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=94 DEFAULT CHARSET=utf8;
+
+INSERT INTO `movie_table` (`movie_id`,`title`,`rating`,`category`,`purchased`) VALUES ('83','Big Advenure','G','family','2002-03-06');
+INSERT INTO `movie_table` (`movie_id`,`title`,`rating`,`category`,`purchased`) VALUES ('89','Shiny Things, The','PG','drama','2002-03-06');
+INSERT INTO `movie_table` (`movie_id`,`title`,`rating`,`category`,`purchased`) VALUES ('88','End of the Line','R','misc','2001-02-05');
+INSERT INTO `movie_table` (`movie_id`,`title`,`rating`,`category`,`purchased`) VALUES ('87','A Rat named Darcy','G','family','2003-04-19');
+INSERT INTO `movie_table` (`movie_id`,`title`,`rating`,`category`,`purchased`) VALUES ('86','Head First Rules','R','action','2003-04-19');
+INSERT INTO `movie_table` (`movie_id`,`title`,`rating`,`category`,`purchased`) VALUES ('85','Mad Clowns','R','horror','1999-11-20');
+INSERT INTO `movie_table` (`movie_id`,`title`,`rating`,`category`,`purchased`) VALUES ('84','Greg: The Untold Story','PG','action','2001-02-05');
+INSERT INTO `movie_table` (`movie_id`,`title`,`rating`,`category`,`purchased`) VALUES ('93','Potentially Habitable Planet','PG','scifi','2001-02-05');
+INSERT INTO `movie_table` (`movie_id`,`title`,`rating`,`category`,`purchased`) VALUES ('92','Weird Things from Space','PG','scifi','2003-04-19');
+INSERT INTO `movie_table` (`movie_id`,`title`,`rating`,`category`,`purchased`) VALUES ('91','Shark Bait','G','misc','1999-11-20');
+INSERT INTO `movie_table` (`movie_id`,`title`,`rating`,`category`,`purchased`) VALUES ('90','Take it Back','R','comedy','2001-02-05');
+
+
+
+# CocoaMySQL dump
+# Version 0.7b5
+# http://cocoamysql.sourceforge.net
+#
+# Host: localhost (MySQL 5.0.37)
+# Database: hfmysql
+# Generation Time: 2007-09-07 12:11:16 -0400
+# ************************************************************
+
+# Dump of table hooptie
+# ------------------------------------------------------------
+
+CREATE TABLE `hooptie` (
+  `color` varchar(20) default NULL,
+  `year` varchar(4) default NULL,
+  `make` varchar(20) default NULL,
+  `mo` varchar(20) default NULL,
+  `howmuch` float(10,3) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `hooptie` (`color`,`year`,`make`,`mo`,`howmuch`) VALUES ('silver','1998','Porsche','Boxter','17992.539');
+INSERT INTO `hooptie` (`color`,`year`,`make`,`mo`,`howmuch`) VALUES (NULL,'2000','Jaguar','XJ','15995.000');
+INSERT INTO `hooptie` (`color`,`year`,`make`,`mo`,`howmuch`) VALUES ('red','2002','Cadillac','Escalade','40215.898');
+
+
+
+# Dump of table my_contacts
+# ------------------------------------------------------------
+CREATE TABLE `my_contacts` (
+  `last_name` varchar(30) ,
+  `first_name` varchar(20) ,
+  `email` varchar(50) ,
+  `gender` char(1),
+  `birthday` date ,
+  `profession` varchar(50),
+  `location` varchar(50),
+  `status` varchar(20),
+  `interests` varchar(100),
+  `seeking` varchar(100)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`,`profession`,`location`,`status`,`interests`,`seeking`) VALUES ('Anderson','Jillian','jill_anderson@ \nbreakneckpizza.com','F','1980-09-05','Technical Writer','Palo Alto, CA','single','kayaking, reptiles','relationship, friends');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`,`profession`,`location`,`status`,`interests`,`seeking`) VALUES ('Kenton','Leo','lkenton@starbuzzcoffee.com','M','1974-01-10','Manager','San Francisco, CA','divorced','women','women to date');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`,`profession`,`location`,`status`,`interests`,`seeking`) VALUES ('McGavin','Darrin',' captainlove@headfirsttheater.com','M','1966-01-23','Cruise Ship Captain','San Diego, CA','single','sailing, fishing, yachting','women for casual relationships');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`,`profession`,`location`,`status`,`interests`,`seeking`) VALUES ('Franklin','Joe','joe_franklin@leapinlimos.com','M','1977-04-28','Software Sales','Dallas, TX','married','fishing, drinking','new job');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`,`profession`,`location`,`status`,`interests`,`seeking`) VALUES ('Hamilton','Jamie','dontbother@starbuzzcoffee.com','F','1964-09-10','System Administrator','Princeton, NJ','married','RPG','nothing');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`,`profession`,`location`,`status`,`interests`,`seeking`) VALUES ('Chevrolet','Maurice','bookman4u@objectville.net','M','1962-07-01','Bookshop Owner','Mountain View, CA','married','collecting books, scuba diving','friends');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`,`profession`,`location`,`status`,`interests`,`seeking`) VALUES ('Kroger','Renee','poorrenee@mightygumball.net','F','1976-12-03','Unemployed','San Francisco, CA','divorced','cooking','employment');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`,`profession`,`location`,`status`,`interests`,`seeking`) VALUES ('Mendoza','Angelina','angelina@starbuzzcoffee.com','F','1979-08-19','UNIX Sysadmin','San Francisco, CA','married','acting, dancing','new job');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`,`profession`,`location`,`status`,`interests`,`seeking`) VALUES ('Murphy','Donald','padraic@tikibeanlounge.com','M','1967-01-23','Computer Programmer','New York City, NY','committed relationsh','RPG, anime','friends');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`,`profession`,`location`,`status`,`interests`,`seeking`) VALUES ('Spatner','John','jpoet@objectville.net','M','1963-04-18','Salesman','Woodstock, NY','married','poetry, screenwriting','nothing');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`, `profession`,`location`) VALUES ('Toth','Anne','Anne_Toth@leapinlimos.com','F','1969-11-18', 'Artist','San Fran, CA');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`, `profession`,`location`) VALUES ('Manson','Anne','am86@objectville.net','F','1977-08-09', 'Baker','Seattle, WA');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`, `profession`,`location`) VALUES ('Hardy','Anne','anneh@b0tt0msup.com','F','1963-04-18', 'Teacher','San Fran, CA');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`, `profession`,`location`) VALUES ('Parker','Anne','annep@starbuzzcoffee.com','F','1983-01-10', 'Student','San Fran, CA');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`, `profession`,`location`) VALUES ('Blunt','Anne','anneblunt@breakneckpizza.com','F','1959-10-09', 'Web Designer','San Fran, CA');
+INSERT INTO `my_contacts` (`last_name`,`first_name`,`email`,`gender`,`birthday`, `profession`,`location`) VALUES ('Jacobs','Anne','anne99@objectville.net','F','1968-02-05', 'Computer Programmer','San Jose, CA');
+
+# Dump of table toys
+# ------------------------------------------------------------
+
+CREATE TABLE `toys` (
+  `toy_id` int(11) default NULL,
+  `toy` varchar(20) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `toys` (`toy_id`,`toy`) VALUES ('1','hula hoop');
+INSERT INTO `toys` (`toy_id`,`toy`) VALUES ('2','balsa glider');
+INSERT INTO `toys` (`toy_id`,`toy`) VALUES ('3','toy soldiers');
+INSERT INTO `toys` (`toy_id`,`toy`) VALUES ('4','harmonica');
+INSERT INTO `toys` (`toy_id`,`toy`) VALUES ('5','baseball cards');
+INSERT INTO `toys` (`toy_id`,`toy`) VALUES ('6','tinker toys');
+INSERT INTO `toys` (`toy_id`,`toy`) VALUES ('7','etch-a-sketch');
+INSERT INTO `toys` (`toy_id`,`toy`) VALUES ('8','slinky');
+
+
+
+# CocoaMySQL dump
+# Version 0.7b5
+# http://cocoamysql.sourceforge.net
+#
+# Host: localhost (MySQL 5.0.37)
+# Database: hfmysql
+# Generation Time: 2007-09-10 09:51:48 -0400
+# ************************************************************
+
+# Dump of table toy_ids
+# ------------------------------------------------------------
+
+CREATE TABLE `toy_ids` (
+  `toy_id` int(11) NOT NULL auto_increment,
+  `toy` varchar(30) NOT NULL,
+  PRIMARY KEY  (`toy_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+INSERT INTO `toy_ids` (`toy_id`,`toy`) VALUES ('5','whiffleball');
+INSERT INTO `toy_ids` (`toy_id`,`toy`) VALUES ('6','frisbee');
+INSERT INTO `toy_ids` (`toy_id`,`toy`) VALUES ('9','kite');
+INSERT INTO `toy_ids` (`toy_id`,`toy`) VALUES ('12','yoyo');
+
+
+# Dump of table toy_other
+# ------------------------------------------------------------
+
+CREATE TABLE `toy_other` (
+  `toy_id` int(11) NOT NULL,
+  `store_id` int(11) NOT NULL,
+  `color` varchar(30) NOT NULL,
+  `inventory` int(11) default NULL,
+  `address` varchar(30) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `toy_other` (`toy_id`,`store_id`,`color`,`inventory`,`address`) VALUES ('5','1','white','34','23 Maple');
+INSERT INTO `toy_other` (`toy_id`,`store_id`,`color`,`inventory`,`address`) VALUES ('5','3','yellow','12','100 E. North St.');
+INSERT INTO `toy_other` (`toy_id`,`store_id`,`color`,`inventory`,`address`) VALUES ('5','1','blue','5','23 Maple');
+INSERT INTO `toy_other` (`toy_id`,`store_id`,`color`,`inventory`,`address`) VALUES ('6','2','green','10','1902 Amber Ln.');
+INSERT INTO `toy_other` (`toy_id`,`store_id`,`color`,`inventory`,`address`) VALUES ('6','4','yellow','24','17 Engleside');
+INSERT INTO `toy_other` (`toy_id`,`store_id`,`color`,`inventory`,`address`) VALUES ('9','1','red','50','23 Maple');
+INSERT INTO `toy_other` (`toy_id`,`store_id`,`color`,`inventory`,`address`) VALUES ('9','2','blue','2','1902 Amber Ln.');
+INSERT INTO `toy_other` (`toy_id`,`store_id`,`color`,`inventory`,`address`) VALUES ('9','2','green','18','1902 Amber Ln.');
+INSERT INTO `toy_other` (`toy_id`,`store_id`,`color`,`inventory`,`address`) VALUES ('12','4','white','28','17 Engleside');
+INSERT INTO `toy_other` (`toy_id`,`store_id`,`color`,`inventory`,`address`) VALUES ('12','4','yellow','11','17 Engleside');
+
+
+
+# CocoaMySQL dump
+# Version 0.7b5
+# http://cocoamysql.sourceforge.net
+#
+# Host: localhost (MySQL 5.0.37)
+# Database: hfmysql
+# Generation Time: 2007-09-10 10:13:51 -0400
+# ************************************************************
+
+# Dump of table store_info
+# ------------------------------------------------------------
+
+CREATE TABLE `store_info` (
+  `store_id` int(11) NOT NULL auto_increment,
+  `address` varchar(50) NOT NULL,
+  `phone` varchar(10) NOT NULL,
+  `manager` varchar(50) NOT NULL,
+  PRIMARY KEY  (`store_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+INSERT INTO `store_info` (`store_id`,`address`,`phone`,`manager`) VALUES ('1','23 Maple','555-6712','Joe');
+INSERT INTO `store_info` (`store_id`,`address`,`phone`,`manager`) VALUES ('2','1902 Amber Ln','555-3478','Susan');
+INSERT INTO `store_info` (`store_id`,`address`,`phone`,`manager`) VALUES ('3','100 E. North St.','555-0987','Tara');
+INSERT INTO `store_info` (`store_id`,`address`,`phone`,`manager`) VALUES ('4','17 Engleside','555-6554','Gordon');
+
+
+# Dump of table store_inventory
+# ------------------------------------------------------------
+
+CREATE TABLE `store_inventory` (
+  `toy_id` int(11) NOT NULL,
+  `store_id` int(11) NOT NULL,
+  `inventory` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `store_inventory` (`toy_id`,`store_id`,`inventory`) VALUES ('5','1','34');
+INSERT INTO `store_inventory` (`toy_id`,`store_id`,`inventory`) VALUES ('5','3','12');
+INSERT INTO `store_inventory` (`toy_id`,`store_id`,`inventory`) VALUES ('5','1','5');
+INSERT INTO `store_inventory` (`toy_id`,`store_id`,`inventory`) VALUES ('6','2','10');
+INSERT INTO `store_inventory` (`toy_id`,`store_id`,`inventory`) VALUES ('6','4','24');
+INSERT INTO `store_inventory` (`toy_id`,`store_id`,`inventory`) VALUES ('9','1','50');
+INSERT INTO `store_inventory` (`toy_id`,`store_id`,`inventory`) VALUES ('9','2','2');
+INSERT INTO `store_inventory` (`toy_id`,`store_id`,`inventory`) VALUES ('9','2','18');
+INSERT INTO `store_inventory` (`toy_id`,`store_id`,`inventory`) VALUES ('12','4','28');
+INSERT INTO `store_inventory` (`toy_id`,`store_id`,`inventory`) VALUES ('12','4','11');
+
+
+# Dump of table toy_info
+# ------------------------------------------------------------
+
+CREATE TABLE `toy_info` (
+  `toy_id` int(11) NOT NULL,
+  `toy` varchar(30) default NULL,
+  `color` varchar(30) NOT NULL,
+  `cost` decimal(5,2) default NULL,
+  `weight` decimal(5,2) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `toy_info` (`toy_id`,`toy`,`color`,`cost`,`weight`) VALUES ('1','whiffleball','white','1.95',0.3);
+INSERT INTO `toy_info` (`toy_id`,`toy`,`color`,`cost`,`weight`) VALUES ('2','whiffleball','yellow','2.20',0.4);
+INSERT INTO `toy_info` (`toy_id`,`toy`,`color`,`cost`,`weight`) VALUES ('3','whiffleball','blue','1.95',0.3);
+INSERT INTO `toy_info` (`toy_id`,`toy`,`color`,`cost`,`weight`) VALUES ('4','frisbee','green','3.50',0.5);
+INSERT INTO `toy_info` (`toy_id`,`toy`,`color`,`cost`,`weight`) VALUES ('5','frisbee','yellow','1.50',0.2);
+INSERT INTO `toy_info` (`toy_id`,`toy`,`color`,`cost`,`weight`) VALUES ('6','kite','red','5.75',1.2);
+INSERT INTO `toy_info` (`toy_id`,`toy`,`color`,`cost`,`weight`) VALUES ('7','kite','blue','5.75',1.2);
+INSERT INTO `toy_info` (`toy_id`,`toy`,`color`,`cost`,`weight`) VALUES ('8','kite','green','3.15',0.8);
+INSERT INTO `toy_info` (`toy_id`,`toy`,`color`,`cost`,`weight`) VALUES ('9','yoyo','white','4.25',0.4);
+INSERT INTO `toy_info` (`toy_id`,`toy`,`color`,`cost`,`weight`) VALUES ('10','yoyo','yellow','1.50',0.2);
+
+
+
+# CocoaMySQL dump
+# Version 0.7b5
+# http://cocoamysql.sourceforge.net
+#
+# Host: localhost (MySQL 5.0.37)
+# Database: hfmysql
+# Generation Time: 2007-09-07 10:47:53 -0400
+# ************************************************************
+
+# Dump of table your_table
+# ------------------------------------------------------------
+
+CREATE TABLE `your_table` (
+  `id` int(11) NOT NULL auto_increment,
+  `first_name` varchar(20) default NULL,
+  `last_name` varchar(30) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=100 DEFAULT CHARSET=latin1;
+
+INSERT INTO `your_table` (`id`,`first_name`,`last_name`) VALUES ('1','Marcia','Brady');
+INSERT INTO `your_table` (`id`,`first_name`,`last_name`) VALUES ('2','Bobby','Brady');
+INSERT INTO `your_table` (`id`,`first_name`,`last_name`) VALUES ('3','Cindy','Brady');
+INSERT INTO `your_table` (`id`,`first_name`,`last_name`) VALUES ('99','Peter','Brady');
+
+
+
+# Dump of table boys
+# ------------------------------------------------------------
+
+CREATE TABLE `boys` (
+  `boy_id` int(11) default NULL,
+  `boy` varchar(20) default NULL,
+  `toy_id` int(11) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `boys` (`boy_id`,`boy`,`toy_id`) VALUES ('1','Davey','3');
+INSERT INTO `boys` (`boy_id`,`boy`,`toy_id`) VALUES ('2','Bobby','5');
+INSERT INTO `boys` (`boy_id`,`boy`,`toy_id`) VALUES ('3','Beaver','2');
+INSERT INTO `boys` (`boy_id`,`boy`,`toy_id`) VALUES ('4','Richie','1');
+INSERT INTO `boys` (`boy_id`,`boy`,`toy_id`) VALUES ('6','Johnny','4');
+INSERT INTO `boys` (`boy_id`,`boy`,`toy_id`) VALUES ('5','Billy','2');
+
+
+# CocoaMySQL dump
+# Version 0.7b5
+# http://cocoamysql.sourceforge.net
+#
+# Host: localhost (MySQL 5.0.37)
+# Database: hfmysql
+# Generation Time: 2007-09-07 12:28:32 -0400
+# ************************************************************
+
+# Dump of table car_table
+# ------------------------------------------------------------
+
+CREATE TABLE `car_table` (
+  `VIN` varchar(16) default NULL,
+  `make` varchar(20) default NULL,
+  `model` varchar(20) default NULL,
+  `color` varchar(20) default NULL,
+  `price` decimal(7,2) default NULL,
+  `year` varchar(4) default NULL,
+  `car_id` int(11) NOT NULL auto_increment,
+  PRIMARY KEY  (`car_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+INSERT INTO `car_table` (`VIN`,`make`,`model`,`color`,`price`,`year`,`car_id`) VALUES (NULL,'Porsche','Boxter','silver','1234','1998','1');
+INSERT INTO `car_table` (`VIN`,`make`,`model`,`color`,`price`,`year`,`car_id`) VALUES (NULL,'Jaguar','XJ',NULL,'3214','2000','2');
+INSERT INTO `car_table` (`VIN`,`make`,`model`,`color`,`price`,`year`,`car_id`) VALUES (NULL,'Cadillac','Escalade','red','1231','2002','3');
+
+
+
+# CocoaMySQL dump
+# Version 0.7b5
+# http://cocoamysql.sourceforge.net
+#
+# Host: localhost (MySQL 5.0.37)
+# Database: hfmysql
+# Generation Time: 2007-09-07 12:28:32 -0400
+# ************************************************************
+
+# Dump of table clown_info
+# ------------------------------------------------------------
+
+
+CREATE TABLE `clown_info` (
+ `name` varchar(50) default NULL,
+ `last_seen` varchar(50) default NULL,
+ `appearance` varchar(50) default NULL,
+ `activities` varchar(50) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO clown_info VALUES ('Elsie', 'Cherry Hill Senior Center', 'F, red hair, green dress, huge feet', 'balloons, little car');
+INSERT INTO clown_info VALUES ('Pickles', 'Jack Green\'s party', 'M, orange hair, blue suit, huge feet','mime');
+INSERT INTO clown_info VALUES ('Snuggles' ,'Ball?Mart' ,'F, yellow shirt, baggy red pants', 'horn, umbrella');
+INSERT INTO clown_info VALUES ('Mr. Hobo' ,'Party for Eric Gray' ,'M, cigar, black hair, tiny hat',' violin');
+INSERT INTO clown_info VALUES ('Clarabelle' ,'Belmont Senior Center' ,'F, pink hair, huge flower, blue dress', 'yelling, dancing');
+INSERT INTO clown_info VALUES ('Scooter', 'Oakland Hospital' ,'M, blue hair, red suit, huge nose', 'balloons'); 
+INSERT INTO clown_info VALUES ('Zippo' ,'Millstone Mall', 'F, orange suit, baggy pants', 'dancing'); 
+INSERT INTO clown_info VALUES ('Babe', 'Earl\'s Autos' ,'F, all pink and sparkly', 'balancing, little car');
+INSERT INTO clown_info VALUES ('Bonzo' ,'','M, in drag, polka dotted dress', 'singing, dancing');
+INSERT INTO clown_info VALUES ('Sniffles' ,'Tracy\'s', 'M, green and purple suit, pointy nose',''); 
+CREATE TABLE cookie_sales (
+  ID int(11) NOT NULL auto_increment,
+  first_name varchar(20) NOT NULL,
+  sales decimal(4,2) NOT NULL,
+  sale_date date NOT NULL,
+  PRIMARY KEY  (ID)
+);
+
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('1','Lindsey',32.02,'2007-03-12');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('2','Nicole',26.53,'2007-03-12');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('3','Britney',11.25,'2007-03-12');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('4','Ashley',18.96,'2007-03-12');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('5','Lindsey',9.16,'2007-03-11');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('6','Nicole',1.52,'2007-03-11');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('7','Britney',43.21,'2007-03-11');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('8','Ashley',8.05,'2007-03-11');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('9','Lindsey',17.62,'2007-03-10');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('10','Nicole',24.19,'2007-03-10');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('11','Britney',3.40,'2007-03-10');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('12','Ashley',15.21,'2007-03-10');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('13','Lindsey',0.00,'2007-03-09');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('14','Nicole',31.99,'2007-03-09');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('15','Britney',2.58,'2007-03-09');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('16','Ashley',0.00,'2007-03-09');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('17','Lindsey',2.34,'2007-03-08');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('18','Nicole',13.44,'2007-03-08');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('19','Britney',8.78,'2007-03-08');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('20','Ashley',26.82,'2007-03-08');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('21','Lindsey',3.71,'2007-03-07');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('22','Nicole',0.56,'2007-03-07');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('23','Britney',34.19,'2007-03-07');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('24','Ashley',7.77,'2007-03-07');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('25','Lindsey',16.23,'2007-03-06');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('26','Nicole',0.00,'2007-03-06');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('27','Britney',4.50,'2007-03-06');
+INSERT INTO `cookie_sales` (`ID`,`first_name`,`sales`,`sale_date`) VALUES ('28','Ashley',19.22,'2007-03-06');
+
+
